@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<style type="text/css">
+
+    body { background-image: url(flower.jpg); }
+
+    a
+    {
+        text-decoration: none;
+        color: black;
+    }
+
+    table
+    {
+        border-collapse: collapse;
+        font-family: verdana;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    tr, th { padding: 10px; }
+
+</style>
+<script>
+    
+    function validation()
+    {
+        var email = document.registerForm.email.value;
+        var userPass = document.registerForm.userPass.value;
+        var custName = document.registerForm.custName.value;
+        var custPhone = document.registerForm.custPhone.value;
+        var custAddress = document.registerForm.custAddress.value;
+
+        if (email == "")
+        {
+            alert("Please provide an email!");
+            return false;
+        }
+
+        else if (userPass == "")
+        {
+            alert("Please provide a password!");
+            return false;
+        }
+
+        else if(userPass.length < 3)
+        {
+            alert("Password must be at least 3 characters!");
+            return false;  
+        }
+
+        else if(custName == "")
+        {
+            alert("Please provide your name!");
+            return false;
+        }
+
+        else if(!/^[A-z\s]+$/.test(custName))
+        {
+           alert("Your name must only be in alphabets!");
+            return false;
+        }
+
+        else if (custPhone == "")
+        {
+            alert("Please provide a phone number!");
+            return false;
+        }
+
+        else if(!/^[0-9]+$/.test(custPhone))
+        {
+            alert("Your phone no. must be in numeric only!");
+            return false;
+        }
+
+        else if(custAddress == "")
+        {
+            alert("Please provide your address!");
+            return false;
+        }
+
+        else { return true; }
+    }
+
+</script>
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+        <center>
+            <h1>Registration</h1>
+            <form action="registerPage.php" name="registerForm" method="post" onsubmit="return validation()">
+                <table border="3">
+                    <tr>
+                        <th>Email</th>
+                        <th><input type="email" name="email" id="email" placeholder="example@example.com"></th>
+                    </tr>
+                    <tr>
+                        <th>Password</th>
+                        <th><input type="password" name="userPass" id="userPass" placeholder="3 or more characters"></th>
+                    </tr>
+                    <tr>
+                        <th>Full Name</th>
+                        <th><input type="text" name="custName" id="custName" placeholder="3 or more characters"></th>
+                    </tr>
+                    <tr>
+                        <th>Phone</th>
+                        <th><input type="text" name="custPhone" id="custPhone" placeholder="Numbers only"></th>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <th><textarea type="text" name="custAddress" id="custAddress" placeholder=""></textarea></th>
+                    </tr>
+                </table><br>
+                <input type="submit" value="Register" name="submit">
+            </form><button><a href="login.html" target="_parent">Return to Login</a></button>
+        </center>
+    </body>
+</html>

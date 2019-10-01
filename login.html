@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<style>
+
+input[type=password], input[type=email]
+{
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  width: 30%;
+}
+
+label
+{
+  color: white;
+  font-family: 'Pacifico';
+  font-size: 20px;
+  padding-left: 30px;
+}
+
+body
+{
+  background-image: url("brooke.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/* Set a style for all buttons */
+button
+{
+  background-color: magenta;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+}
+
+p
+{
+  text-align: left;
+  font-size: 7em;
+  padding-left: 50px;
+  margin: 20px 0 20px 0;
+}
+
+a
+{
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@keyframes neon1
+{
+  from
+  {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+    text-decoration: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+
+  to
+  {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+    text-decoration: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+}
+
+p:nth-child(1) a
+{
+  color: #fff;
+  font-family: "Pacifico";
+  text-decoration: underline;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+p:nth-child(1) a:hover
+{
+  color: #FF1177;
+  -webkit-animation: none;
+  -moz-animation: none;
+  animation: none;
+}
+
+</style>
+<head><title>Kiss Cookies</title></head>
+<html>
+  <body>
+    <p><a>KissCookies</a></p>
+
+    <form action="login.php" method="post">
+      <input type="email" name="email" placeholder="Enter existing email" required style="position:absolute;top:33.5%;left:8.5%">
+      <input type="password" id="password" name="userPass" placeholder="Enter password" required style="position:absolute;top:41%;left:8.5%">    
+      <button type="submit" id="btn" name="Login" style="position:absolute;bottom:36.5%;left:8.5%;"><b>Login</b></button>
+    </form>
+    
+    <br><br><br><br><br><br><br><br><br><br>
+    <a href="registerPage.html" style="position:relative;left:8.2%;color:white;"><button><b>Register</b></button></a>
+    <div id="linkBack" style="position:absolute;right:0px;top:0px;background-color:magenta;margin:0;width:60px auto;padding:5px">
+      <a href="baker.html" target="_parent" style="font-size:14px;text-decoration:none;color:#fff;padding:0 0 0 5px;font-family:sans-serif"><b>Admin</b></a>
+    </div>
+  </body>
+</html>

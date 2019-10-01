@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<style>
+
+	body { background: url(coffeecandy3.jpg); }
+
+	button
+	{
+	    background-color: black;
+	    color: white;
+	    padding: 14px 20px;
+	    border: 5px solid #8B4513;
+	    cursor: pointer;
+	}
+
+	.border
+	{
+		background-color: black;
+	    color: white;
+	    padding: 14px 20px;
+	    border: 5px solid #8B4513;
+	    width: 450px;
+	}
+
+</style>
+<html>
+	<head><title>Order</title></head>
+	<body>
+		<center>
+			<h1 style="text-align:center;color:white;">May I Take Your Order?</h1><br>
+					
+			<form action="order.php" method="post">
+				<div class="border">
+					<a style="color:white;">
+						<input type="radio" name="cookieID" value="1">Chocolate Chips
+						<input type="radio" name="cookieID" value="2">Cornflakes
+						<input type="radio" name="cookieID" value="3">Walnut
+						<input type="radio" name="cookieID" value="4">Chocolate Flakes
+					</a>
+				</div>
+				<p style="font-size:20px;color:white;">Quantity</p>
+				<input type="text" name="totCookies" placeholder="Quantity of cookies" style="padding:10px 10px;">
+				<p style="font-size:20px;color:white;">Delivery date</p>
+				<input type="date" name="date" placeholder="Delivery date" style="text-align:center;padding:10px 10px;">
+				<br><br><br><br><button type="submit" style="position:relative;bottom:10%;">Submit</button>
+			</form><br>
+			<a href="loginPage.php" style="position:relative;color:white;"><button>Home</button></a>
+		</center>
+	</body>
+</html>
